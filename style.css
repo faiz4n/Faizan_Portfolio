@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color:rgb(23, 23, 23);
+}
+.header{
+    display: flex;
+    justify-content: right;
+}
+nav{
+    position: fixed;
+    align-items: center;
+    background-color: rgba(54, 54, 54, 0.443);
+    margin: 15px 15px;
+    padding: 20px;
+    border-radius: 13px;
+}
+nav a{
+    padding: 0 20px;
+}
+
+.main{
+    height: 100%;
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+}
+.main h1,span{
+    font-size: 55px;
+    font-weight: 600;
+}
+.main span{
+    color: rgb(240, 164, 49);
+}
+.line h3{
+    color: rgb(255, 212, 156);
+    margin: 20px 0;
+}
+.main img{
+    max-height: 400px;
+    object-fit: contain;
+}
+.socials{
+    display: flex;
+    align-items: center;
+}
+.socials i{
+    margin-right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    color:rgba(255, 207, 144, 0.47) ;
+    transition: all 0.2s ease;
+}
+.socials i:hover{
+    scale: 1.2;
+    color: rgb(255, 212, 156) ;
+}
