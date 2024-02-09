@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +7,8 @@
     font-weight: 500;
     color: white;
     text-decoration: none;
-    
+    transition: all 0.2s ease;
+    scroll-behavior: smooth;
 }
 html,body{
     height: 100%;
@@ -17,20 +19,27 @@ body{
 }
 .header{
     display: flex;
-    justify-content: right;
+    justify-content: right  ;
 }
 nav{
-    position: fixed;
+    display: flex;
     align-items: center;
-    background-color: rgba(54, 54, 54, 0.443);
+    justify-content: center;
+    position: fixed;
+    background-color: rgba(66, 66, 66, 0.443);
     margin: 15px 15px;
     padding: 20px;
+    backdrop-filter: blur(15px);
     border-radius: 13px;
 }
 nav a{
     padding: 0 20px;
+    transition: all 0.1s ease;
 }
-
+nav a:hover{
+    color: rgb(240, 164, 49);
+    scale: 1.05;
+}
 .main{
     height: 100%;
     margin: 0 5%;
@@ -71,4 +80,60 @@ nav a{
 .socials i:hover{
     scale: 1.2;
     color: rgb(255, 212, 156) ;
+}
+
+/* -------------------MEDIA QUERIES------------------ */
+
+@media(max-width:800px){
+    .main{
+        display: flex;
+        flex-direction: column-reverse;
+        transition: all 0.2s ease;
+        align-items: flex-start;
+    }
+    .header{
+        display: flex;
+        justify-content: center;
+    }
+    nav {
+        bottom:20px;
+        position: fixed;
+        padding: 20px 10px;
+        z-index: 1;
+    }
+    nav a{
+        padding: 0 8px;
+    }
+    .main img{
+        height: 250px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .about{
+        padding: 25px;
+        margin-bottom: 90px;
+    }
+    .name h1,span{
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 600px){
+    nav {
+        bottom:20px;
+        position: fixed;
+        padding: 20px 10px;
+        z-index: 1;
+    }
+    .header{
+        display: flex;
+        justify-content: center;
+    }
+    .line{
+        font-size: 12px;
+    }
+    nav a{
+        padding: 0 8px;
+        font-size: 14px;
+    }
 }
